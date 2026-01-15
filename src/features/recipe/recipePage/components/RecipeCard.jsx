@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export function RecipeCard({ recipe }) {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export function RecipeCard({ recipe }) {
       onClick={() => navigate(`/recipe/${recipe.id}`)}
     >
       <img
-        src={recipe.imageUrl}
+        src={`${IMAGE_BASE_URL}/data/recipe/${recipe.imageUrl}`}
         alt={recipe.title}
         className="recipe-img"
       />
