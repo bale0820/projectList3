@@ -15,7 +15,7 @@ export function SlideContainer({ images, index, setIndex }) {
             className={`slide-wrapper ${index === i ? "active" : ""}`}
           >
             <img
-              src={`${IMAGE_BASE_URL}${img}`}
+              src={`${IMAGE_BASE_URL}/data/${img}`}
               alt={`슬라이드-${i}`}
               className="slide-image"
             />
