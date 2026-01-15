@@ -2,8 +2,10 @@ import React from "react";
 import { IoIosRadioButtonOn } from "react-icons/io";
 import { SlideDots } from "./SlideDots";
 import "./SlideContainer.scss";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export function SlideContainer({ images, index, setIndex }) {
+  
   return (
     <div className="slide-container">
       {images &&
@@ -13,7 +15,7 @@ export function SlideContainer({ images, index, setIndex }) {
             className={`slide-wrapper ${index === i ? "active" : ""}`}
           >
             <img
-              src={img}
+              src={`${IMAGE_BASE_URL}${img}`}
               alt={`슬라이드-${i}`}
               className="slide-image"
             />

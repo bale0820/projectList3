@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Popup.css";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export default function Popup({ onClose }) {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function Popup({ onClose }) {
     <div className="popup-container">
       <div className="popup-content">
         <img
-          src="/images/popupimage/coupon_image1.png"
+          src={`${IMAGE_BASE_URL}/images/popupimage/coupon_image1.png`}
           alt="쿠폰"
           className="popup-image"
         />
