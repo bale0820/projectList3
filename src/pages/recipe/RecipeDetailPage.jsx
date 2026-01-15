@@ -6,7 +6,7 @@ import { useRecipeDetail } from "features/recipe/recipeDetail/useRecipeDetail";
 import { RelatedProductList } from "features/recipe/recipeDetail/components/RelatedProductList";
 import { ReviewWriteBox } from "features/recipe/recipeDetail/components/ReviewWriteBox";
 import { ReviewList } from "features/recipe/recipeDetail/components/ReviewList";
-import { API_BASE_URL } from "shared/constants/apiBaseUrl";
+import { API_BASE_URL, IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 
 
@@ -45,7 +45,7 @@ export default function RecipeDetailPage() {
     <div className="recipe-detail-container">
 
       {/* 이미지 */}
-      <img src={`${API_BASE_URL}/data/recipe/${recipe.imageUrl}`} alt="레시피 메인 이미지" className="detail-img" />
+      <img src={`${IMAGE_BASE_URL}/data/recipe/${recipe.imageUrl}`} alt="레시피 메인 이미지" className="detail-img" />
 
       {/* 제목 */}
       <h1 className="detail-title">{recipe.title}</h1>
