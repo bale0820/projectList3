@@ -1,3 +1,5 @@
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
+
 export function Detail({images}) {
   return (
     <div>
