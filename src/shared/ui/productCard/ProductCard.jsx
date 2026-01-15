@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductCard.scss";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export default function ProductCard({ item }) {
   // 할인된 가격 계산
@@ -22,7 +23,7 @@ export default function ProductCard({ item }) {
       <div className="image-container">
         {/* ✅ 제품 이미지 */}
         <img
-          src={`/images/productImages/${item.imageUrl}`}
+          src={`${IMAGE_BASE_URL}/data/productImages/${item.imageUrl}`}
           alt={item.imageUrl_name}
           className="product-image"
           draggable="false"
