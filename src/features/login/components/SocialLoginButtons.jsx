@@ -1,10 +1,12 @@
+import { API_BASE_URL } from "shared/constants/apiBaseUrl";
+
 // src/features/auth/components/SocialLoginButtons.jsx
 export function SocialLoginButtons() {
   const handleNaverLogin = () =>
-    (window.location.href = "http://localhost:8080/oauth2/authorization/naver");
+    (window.location.href = `${API_BASE_URL}/oauth2/authorization/naver`);
 
   const handleKakaoLogin = () =>
-    (window.location.href = "http://localhost:8080/oauth2/authorization/kakao");
+    (window.location.href = `${API_BASE_URL}/oauth2/authorization/kakao`);
 
   return (
     <>
