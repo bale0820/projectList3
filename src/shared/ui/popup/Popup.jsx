@@ -10,7 +10,7 @@ export default function Popup({ onClose }) {
     <div className="popup-container">
       <div className="popup-content">
         <img
-          src={`${IMAGE_BASE_URL}/images/popupimage/coupon_image1.png`}
+          src={`${IMAGE_BASE_URL}/data/popupimage/coupon_image1.png`}
           alt="쿠폰"
           className="popup-image"
         />
