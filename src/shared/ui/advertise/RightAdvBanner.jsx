@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./advertise.css";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export function RightAdBanner({ ads, interval = 3000, random = false }) {
   const [index, setIndex] = useState(0);
@@ -28,7 +29,7 @@ export function RightAdBanner({ ads, interval = 3000, random = false }) {
       <a href={ad.advLink} target="_blank" rel="noreferrer">
         <img 
           className="banner-img"
-          src={ad.advImageBanner}
+          src={`${IMAGE_BASE_URL}/data${ad.advImageBanner}`}
           alt={ad.advName}
         />
       </a>
