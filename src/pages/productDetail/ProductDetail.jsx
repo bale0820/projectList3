@@ -8,6 +8,7 @@ import { QnA } from "features/productDetail/qna/QnA";
 import { Return } from "features/productDetail/return/Return";
 
 import { useProductDetail } from "features/productDetail/hooks/useProductDetail";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export function ProductDetail() {
   const { id } = useParams();
@@ -46,7 +47,7 @@ export function ProductDetail() {
 
             <div className="product-image-container">
               <img
-                src={`/images/productImages/${product.imageUrl}`}
+                src={`${IMAGE_BASE_URL}/data/images/productImages/${product.imageUrl}`}
                 alt={product.imageUrl_name}
                 className="product-image-main"
               />

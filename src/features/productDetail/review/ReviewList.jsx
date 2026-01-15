@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./ReviewList.scss";
+import { IMAGE_BASE_URL } from "shared/constants/apiBaseUrl";
 
 export function ReviewList({ id }) {
   const reviewsAll = useSelector((state) => state.product.productReviewList);
@@ -100,7 +101,7 @@ export function ReviewList({ id }) {
             <p className="review-content">{r.content}</p>
             <div className="review-images">
               {r.images.map((img, i) => (
-                <img key={i} src={img} alt="리뷰 이미지" />
+                <img key={i} src={`${IMAGE_BASE_URL}/data${img}`} alt="리뷰 이미지" />
               ))}
             </div>
             <div className="review-footer">
